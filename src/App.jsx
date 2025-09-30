@@ -37,44 +37,44 @@ export default function App() {
       <form
         onSubmit={onSubmit}
         className="w-full max-w-2xl rounded-2xl border border-neutral-200 bg-white p-8 shadow-sm">
-        <div className=\"mb-6\">
-          <h1 className=\"text-3xl font-bold tracking-tight text-neutral-900\">Ödeme Bilgileri</h1>
-          <p className=\"mt-1 text-neutral-500\">Kredi kartı bilgilerinizi giriniz</p>
+        <div className="mb-6">
+          <h1 className="text-3xl font-bold tracking-tight text-neutral-900">Ödeme Bilgileri</h1>
+          <p className="mt-1 text-neutral-500">Kredi kartı bilgilerinizi giriniz</p>
         </div>
 
-        <label className=\"block text-[15px] font-semibold text-neutral-900\">Kart Üzerindeki İsim</label>
+        <label className="block text-[15px] font-semibold text-neutral-900">Kart Üzerindeki İsim</label>
         <input
           className={fieldBase + " mt-2"}
-          type=\"text\"
-          placeholder=\"Ahmet Yılmaz\"
+          type="text"
+          placeholder="Ahmet Yılmaz"
           value={nameOnCard}
           onChange={(e) => setNameOnCard(e.target.value)}
-          aria-label=\"Kart Üzerindeki İsim\"
+          aria-label="Kart Üzerindeki İsim"
         />
 
-        <div className=\"mt-6\">
-          <label className=\"block text-[15px] font-semibold text-neutral-900\">Kart Numarası</label>
+        <div className="mt-6">
+          <label className="block text-[15px] font-semibold text-neutral-900">Kart Numarası</label>
           <input
             className={fieldBase + " mt-2"}
-            inputMode=\"numeric\"
-            placeholder=\"0000 0000 0000 0000\"
+            inputMode="numeric"
+            placeholder="0000 0000 0000 0000"
             value={cardNumber}
             onChange={(e) => setCardNumber(e.target.value.replace(/[^0-9 ]/g, ""))}
-            aria-label=\"Kart Numarası\"
+            aria-label="Kart Numarası"
             maxLength={19}
           />
         </div>
 
-        <div className=\"mt-6 grid grid-cols-1 gap-4 md:grid-cols-3\">
+        <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-3">
           <div>
-            <label className=\"block text-[15px] font-semibold text-neutral-900\">Ay</label>
-            <div className=\"relative mt-2\">
+            <label className="block text-[15px] font-semibold text-neutral-900">Ay</label>
+            <div className="relative mt-2">
               <select
                 className={selectBase + " pr-10"}
                 value={expMonth}
                 onChange={(e) => setExpMonth(e.target.value)}
-                aria-label=\"Son Kullanma Ayı\">
-                <option value=\"\">AA</option>
+                aria-label="Son Kullanma Ayı">
+                <option value="">AA</option>
                 {months.map((m) => (
                   <option key={m} value={m}>
                     {m}
@@ -86,14 +86,14 @@ export default function App() {
           </div>
 
           <div>
-            <label className=\"block text-[15px] font-semibold text-neutral-900\">Yıl</label>
-            <div className=\"relative mt-2\">
+            <label className="block text-[15px] font-semibold text-neutral-900">Yıl</label>
+            <div className="relative mt-2">
               <select
                 className={selectBase + " pr-10"}
                 value={expYear}
                 onChange={(e) => setExpYear(e.target.value)}
-                aria-label=\"Son Kullanma Yılı\">
-                <option value=\"\">YY</option>
+                aria-label="Son Kullanma Yılı">
+                <option value="">YY</option>
                 {years.map((y) => (
                   <option key={y} value={y}>
                     {y}
@@ -105,22 +105,22 @@ export default function App() {
           </div>
 
           <div>
-            <label className=\"block text-[15px] font-semibold text-neutral-900\">Güvenlik Kodu</label>
+            <label className="block text-[15px] font-semibold text-neutral-900">Güvenlik Kodu</label>
             <input
               className={fieldBase + " mt-2"}
-              inputMode=\"numeric\"
-              placeholder=\"123\"
+              inputMode="numeric"
+              placeholder="123"
               value={cvv}
               onChange={(e) => setCvv(e.target.value.replace(/[^0-9]/g, ""))}
               maxLength={4}
-              aria-label=\"Güvenlik Kodu\"
+              aria-label="Güvenlik Kodu"
             />
           </div>
         </div>
 
         <button
-          type=\"submit\"
-          className=\"mt-8 w-full rounded-xl bg-black px-6 py-4 text-center text-[15px] font-semibold text-white hover:opacity-95 active:opacity-90\">
+          type="submit"
+          className="mt-8 w-full rounded-xl bg-black px-6 py-4 text-center text-[15px] font-semibold text-white hover:opacity-95 active:opacity-90">
           Şimdi Öde
         </button>
       </form>
@@ -131,14 +131,14 @@ export default function App() {
 function ChevronDownIcon() {
   return (
     <svg
-      className=\"pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 h-5 w-5 text-neutral-400\"
-      viewBox=\"0 0 20 20\"
-      fill=\"currentColor\"
-      aria-hidden=\"true\">
+      className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 h-5 w-5 text-neutral-400"
+      viewBox="0 0 20 20"
+      fill="currentColor"
+      aria-hidden="true">
       <path
-        fillRule=\"evenodd\"
-        d=\"M5.23 7.21a.75.75 0 011.06.02L10 10.168l3.71-2.94a.75.75 0 111.04 1.08l-4.24 3.36a.75.75 0 01-.94 0l-4.24-3.36a.75.75 0 01-.02-1.06z\"
-        clipRule=\"evenodd\"
+        fillRule="evenodd"
+        d="M5.23 7.21a.75.75 0 011.06.02L10 10.168l3.71-2.94a.75.75 0 111.04 1.08l-4.24 3.36a.75.75 0 01-.94 0l-4.24-3.36a.75.75 0 01-.02-1.06z"
+        clipRule="evenodd"
       />
     </svg>
   );
